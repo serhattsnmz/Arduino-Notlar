@@ -7,7 +7,6 @@ void setup() {
 }
 
 void loop() {
-
   digitalWrite(pin1, HIGH);
   digitalWrite(pin2, LOW);
   delay(1000); 
@@ -15,5 +14,4 @@ void loop() {
   digitalWrite(pin1, LOW);
   digitalWrite(pin2, HIGH);
   delay(1000); 
-
 }
