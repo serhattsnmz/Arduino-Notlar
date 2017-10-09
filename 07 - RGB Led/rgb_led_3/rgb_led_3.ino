@@ -1,28 +1,20 @@
-byte led_blue=3;
-byte led_green=5;
-byte led_red=6;
-unsigned int t=50;
+
+byte led_blue=11;
+byte led_green=10;
+byte led_red=9;
+
 void setup() {
-  // put your setup code here, to run once:
 pinMode(led_red,OUTPUT);
 pinMode(led_green,OUTPUT);
 pinMode(led_blue,OUTPUT);
 }
+
 void loop() {
-  // put your main code here, to run repeatedly:
-  for (int i=255; i>-1; i++)
-  {
-    analogWrite(led_red, i);
-    delay(t);
-   }
-   for (int i=255; i>-1; i++)
-  {
-    analogWrite(led_green, i);
-    delay(t);
-   }
-   for (int i=255; i>-1; i++)
-  {
-    analogWrite(led_blue, i);
-    delay(t);
-   }
+  int val1 = map(analogRead(A0),0,1023,0,255);
+  int val2 = map(analogRead(A1),0,1023,0,255);
+  int val3 = map(analogRead(A2),0,1023,0,255);
+  
+  analogWrite(led_red,val1);
+  analogWrite(led_green,val2);
+  analogWrite(led_blue,val3);
 }

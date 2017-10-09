@@ -7,7 +7,7 @@ void setup() {
 }
 
 void loop() {
-    int gelenDeger = analogRead(pin);
+    int gelenDeger = digitalRead(pin);
     if(gelenDeger == HIGH) {
         sayac++;
     }

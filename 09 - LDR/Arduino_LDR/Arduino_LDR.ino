@@ -1,15 +1,22 @@
 int pin = A0;
-int pin2 = 3;
+int led = 3;
+
+int ref = 200; // Led açılıp kapanacağı aralık
 
 void setup() {
   pinMode(pin, INPUT);
-  pinMode(pin2, OUTPUT);
+  pinMode(led, OUTPUT);
   Serial.begin(9600);
 }
 
 void loop() {
   int gelenDeger = analogRead(pin);
   Serial.println(gelenDeger);
-  map(gelenDeger,0,1023,0,255);
-  analogWrite(pin2, gelenDeger);
+  
+  if(gelenDeger > ref) {
+    digitalWrite(led, LOW);
+  }
+  else {
+    digitalWrite(led, HIGH);
+  }
 }
