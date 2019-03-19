@@ -6,6 +6,8 @@
 
 **Yapılması planlanan uygulamalar:**
 
+- Temel elektronik bilgisi ve kullanılacak malzemelerin tanıtılması
+- Arduino IDE arayüzü ve çalışma yapısının anlatılması
 - Temel uygulamalar(LED yakma, buton vb.)
 - Seri port, PWM uygulamaları
 - Arduino ile bilgisayar haberleşmesi
